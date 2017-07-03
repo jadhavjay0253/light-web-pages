@@ -240,8 +240,8 @@ Web.
 
 ![Screenshot of Light Web-Pages Add-On](assets/lwp-addon-ss.png)
 
-* FIREFOX LINK HERE
-* CHROME LINK HERE
+* For Mozilla Firefox: [light_web_pages-v0.1.0.xpi](https://github.com/boramalper/light-web-pages/releases/download/v0.1.0/light_web_pages-v0.1.0.xpi)
+* For Google Chrome/Chromium: [light_web_pages-v0.1.0.crx](https://github.com/boramalper/light-web-pages/releases/download/v0.1.0/light_web_pages-v0.1.0.crx)
 
 ### Demo
 http://labs.boramalper.org/light-web-pages/demo (requires the add-on to be installed)
