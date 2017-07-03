@@ -85,8 +85,7 @@ __`LWP` is an HTTP header, to be added in GET requests, indicating the user's pr
 
 There are three different outcomes of a GET request regarding the `LWP` header:
 
-1. __If the `LWP` header not exists in a GET request__, the server MUST serve the requested resource **without** any
-   redirections.
+1. __If the `LWP` header not exists in a GET request__, the server MUST behave as usual.
 
    This is about backwards-compatibility and meeting the expectations: we should **not** surprise any software that is
    not LWP-aware and redirect them to a different *version* of a resource, which is, technically speaking, a different
@@ -94,9 +93,9 @@ There are three different outcomes of a GET request regarding the `LWP` header:
    expectations of *actual users*, who might get frustrated for not being able to access the *exact* resource s/he
    wants.
 
-2. __If the `LWP` header in a GET request is set to `"1"`__, the server MUST respond with a 303 "See Other" where the
-   `Location` is the URI of the *lighter* version of the requested resource, if exists. The client, then, MUST follow
-   the 303 "See Other" response just as usual.
+2. __If the `LWP` header in a GET request is set to `"1"`__, the server SHOULD respond with a 303 "See Other" where the
+   `Location` is the URI of the *lighter* version of the requested resource, if exists. The client, then, MUST act upon
+   the receipt of the response just as usual.
 
    The client SHALL NOT assume that the server is redirecting because of the `LWP` header, as it might be caused by
    something entirely else as well. Nevertheless, in both cases, the client ought to follow the HTTP specification for
@@ -128,12 +127,13 @@ There are three different outcomes of a GET request regarding the `LWP` header:
      So, every single time, the redirection depends on the respond from the server, but if 303 "See Other" received for
      a given request, it can be served from the cache whenever possible.
 
-3.  __If the `LWP` header in a GET request is set to `"0"`__, the server MUST respond with a 303 "See Other" where the
-   `Location` is the URI of the *heavier*/original version of the requested resource, if exits. The client, then, MUST
-   follow the 303 "See Other" response just as usual.
+3.  __If the `LWP` header in a GET request is set to `"0"`__, the server SHOULD respond with a 303 "See Other" where the
+   `Location` is the URI of the *heavier*/original version of the requested resource, if exits. The client, then, MUST act upon
+   the receipt of the response just as usual.
 
     Any client software that uses `LWP` header can safely be assumed to be LWP-aware, hence, if it's set to zero, the
     server MUST redirect the client to the original version of the resource.
+
 
 ### Pre-fetching
 If you think that the user might follow some of the links presented in your web-page, you can instruct the browser to
