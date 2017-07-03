@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "Light Web-Pages",
+  "version": "1.0",
+
+  "description": "Enables Light Web-Pages (LWP) support for your browser.",
+
+  "icons": {
+    "96": "icons/lwp96.png"
+  },
+
+  "permissions": [
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "http://*/*",
+    "https://*/*"
+  ],
+
+  "browser_action": {
+    "default_icon": "icons/lwp48.png",
+    "default_title": "Light Web-Pages",
+    "default_popup": "popup/popup.html",
+    "browser_style": true
+  },
+
+  "background": {
+    "page": "background/background.html",
+    "persistent": true
+  }
+}
