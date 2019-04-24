@@ -1,5 +1,7 @@
 <h1 align="center">Light Web-Pages</h1>
 
+**2019 EDIT:** Read more about `Save-Data` header in [HTTP Client Hints](https://tools.ietf.org/html/draft-grigorik-http-client-hints-03#section-7); it's a standards-compliant alternative to what is suggested below.
+
 Light Web-Pages (LWP) is a mechanism for redirecting users automatically to the *lighter* versions of the web-pages they
 visit.
 
