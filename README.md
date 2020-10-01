@@ -20,7 +20,7 @@ visit.
 
 ## What is LWP?
 LWP is a proposal to add a new header in HTTP GET and HEAD requests, indicating the client's preference in favour of a
-*lighter* version of the requested resource. The server, then, should redirect the client to the *lighter* version of
+*lighter* version of the requested resource. Then the server, should redirect the client to the *lighter* version of
 the requested resource, if exists.
 
 LWP is proposed as an open alternative to the current proprietary solutions, to keep the Web free, and also to make it
